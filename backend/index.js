@@ -14,13 +14,7 @@ dotenv.config();
 app.use(express.json({ limit: '10mb' }))
 app.use(cors())
 
-// mongoose
-//     .connect("mongodb+srv://vivekrajbansh:Vivek1234@ecommerce.ptq4r.mongodb.net/?retryWrites=true&w=majority&appName=ECommerce", {
-//         useNewUrlParser: true,
-//         useUnifiedTopology: true
-//     })
-//     .then(console.log("Connected to MongoDB"))
-//     .catch((err) => console.log("NOT CONNECTED TO NETWORK", err))
+
 
 const connectDB = async () => {
     try {
