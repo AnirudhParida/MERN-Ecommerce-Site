@@ -5,7 +5,7 @@ const Order = require("./models/orderSchema");
 const Customer = require("./models/customerSchema");
 
 const seedDatabase = async () => {
-    await mongoose.connect("mongodb+srv://vivekrajbansh:Vivek1234@ecommerce.ptq4r.mongodb.net/?retryWrites=true&w=majority&appName=ECommerce", { useNewUrlParser: true, useUnifiedTopology: true });
+    await mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
     console.log("Connected to MongoDB");
 
     await Seller.deleteMany({});
